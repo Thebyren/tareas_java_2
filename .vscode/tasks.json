@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "java (build): Build Workspace",
+			"type": "shell",
+			"command":"javac",
+			"args":[
+				"-d",
+				"bin",
+				"conductores/Conductor.java",
+				"conductores/ConductorCoche.java",
+				"conductores/ConductorMoto.java",
+				"vehiculos/Vehiculo.java",
+				"vehiculos/Coche.java",
+				"vehiculos/Moto.java",
+				"Main.java"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher":[
+				"$javac"
+			],
+			"detail": "compiling Java files"
+		}
+	]
+}

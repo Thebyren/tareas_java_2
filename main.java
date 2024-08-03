@@ -1,14 +1,8 @@
-import Conductores.ConductorCoche;
-import Conductores.ConductorMoto;
+import conductores.Conductor;
 
-import Vehiculos.Moto;
-import Vehiculos.Coche;
-
-import Vehiculos.Vehiculo;
-import Conductores.Conductor;
-
-class main {
+public class Main{
     public static void main(String[] args) {
-        Conductor alex = new ConductorCoche();
+        Conductor alex = new Conductor();
+        System.out.println(alex.licencia);
     }
 }
