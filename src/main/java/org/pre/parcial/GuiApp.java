@@ -4,11 +4,22 @@ package org.pre.parcial;
 import org.pre.parcial.Windows.basicCrud;
 import org.pre.parcial.Windows.ListChampions;
 import org.pre.parcial.Windows.verifyMails;
+import org.pre.parcial.db.DatabaseConnection;
+import org.pre.parcial.entitys.controller.EquipoChampionsController;
+import org.pre.parcial.entitys.controller.TbDatosController;
+import org.pre.parcial.entitys.controller.UsuarioController;
+import org.pre.parcial.entitys.dao.EquipoChampionsDAOImpl;
+import org.pre.parcial.entitys.dao.TbDatosDAOImpl;
+import org.pre.parcial.entitys.dao.UsuarioDAOImpl;
+import org.pre.parcial.entitys.service.EquipoChampionsService;
+import org.pre.parcial.entitys.service.TbDatosService;
+import org.pre.parcial.entitys.service.UsuarioService;
 
 
 //swing
 import javax.swing.*;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.util.Map;
 
 public class GuiApp {
@@ -17,11 +28,20 @@ public class GuiApp {
   private JButton btnWindow1;
   private JButton btnWindow2;
   private JButton btnWindow3;
-  private static final Map<String, JPanel> WindowsList = Map.of(
-          "basic crud",new basicCrud().CreatePanel(),
-          "Verificacion de correos", new verifyMails().CreatePanel(),
-          "Catalogo Champions", new ListChampions().CreatePanel()
-  );
+
+  private static final Map<String, JPanel> WindowsList;
+
+  static {
+    try {
+      WindowsList = Map.of(
+              "basic crud",new basicCrud(new TbDatosController(new TbDatosService(new TbDatosDAOImpl(DatabaseConnection.getConnection())))).CreatePanel(),
+              "Verificacion de correos", new verifyMails(new UsuarioController(new UsuarioService(new UsuarioDAOImpl(DatabaseConnection.getConnection())))).CreatePanel(),
+              "Catalogo Champions", new ListChampions(new EquipoChampionsController(new EquipoChampionsService( new EquipoChampionsDAOImpl(DatabaseConnection.getConnection())))).CreatePanel()
+      );
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
+  }
 
   public GuiApp() {
     ActionListener listener = e -> {

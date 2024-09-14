@@ -5,29 +5,29 @@ import org.pre.parcial.entitys.service.TbDatosService;
 import java.util.List;
 
 public class TbDatosController {
-  private final TbDatosService tbDatosService;
+  private static TbDatosService tbDatosService = null;
 
   public TbDatosController(TbDatosService tbDatosService) {
     this.tbDatosService = tbDatosService;
   }
 
-  public void crearDatos(TbDatos datos) {
+  public static void crearDatos(TbDatos datos) {
     tbDatosService.agregarDatos(datos);
   }
 
-  public TbDatos obtenerDatosPorId(int codigo) {
+  public static TbDatos obtenerDatosPorId(int codigo) {
     return tbDatosService.obtenerDatosPorId(codigo);
   }
 
-  public List<TbDatos> obtenerTodosLosDatos() {
+  public static List<TbDatos> obtenerTodosLosDatos() {
     return tbDatosService.obtenerTodosLosDatos();
   }
 
-  public void actualizarDatos(TbDatos datos) {
+  public static void actualizarDatos(TbDatos datos) {
     tbDatosService.actualizarDatos(datos);
   }
 
-  public void eliminarDatos(int codigo) {
+  public static void eliminarDatos(int codigo) {
     tbDatosService.eliminarDatos(codigo);
   }
 }

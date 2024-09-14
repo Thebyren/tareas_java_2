@@ -8,7 +8,7 @@ import io.github.cdimascio.dotenv.Dotenv;
 public class DatabaseConnection {
   private static final Dotenv dotenv =Dotenv.load();
   // Parámetros para la conexión
-  private static final String URL = "jdbc:mysql://localhost:3306/db_telebot";  // Cambia 'db_telebot' por el nombre de tu base de datos si es necesario
+  private static final String URL = "jdbc:mysql://localhost:3306/dbpreparcial";  // Cambia 'db_telebot' por el nombre de tu base de datos si es necesario
   private static final String USER = "root"; // Cambia 'root' por tu usuario de MySQL
   private static final String PASSWORD = dotenv.get("DATABASE_PASSWORD"); // Cambia 'password' por tu contraseña de mysql en un archivo .env
 
