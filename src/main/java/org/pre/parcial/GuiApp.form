@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.pre.parcial.GuiApp">
+  <grid id="27dc6" binding="MainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="607" height="462"/>
+    </constraints>
+    <properties>
+      <focusTraversalPolicyProvider value="false"/>
+      <inheritsPopupMenu value="false"/>
+      <minimumSize width="500" height="300"/>
+      <name value="ventana principal"/>
+      <opaque value="true"/>
+      <requestFocusEnabled value="true"/>
+    </properties>
+    <border type="line">
+      <color color="-11822924"/>
+    </border>
+    <children>
+      <grid id="2020e" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <minimum-size width="600" height="450"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="449dd" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Source Code Pro" size="28" style="1"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="Ejercicios pre parcial"/>
+              <verticalTextPosition value="0"/>
+            </properties>
+          </component>
+          <grid id="4ea0d" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="33a4" class="javax.swing.JButton" binding="btnWindow1">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <autoscrolls value="false"/>
+                  <background color="-13749183"/>
+                  <borderPainted value="true"/>
+                  <contentAreaFilled value="true"/>
+                  <enabled value="true"/>
+                  <foreground color="-591362"/>
+                  <hideActionText value="false"/>
+                  <text value="basic crud"/>
+                </properties>
+              </component>
+              <component id="f02eb" class="javax.swing.JButton" binding="btnWindow2">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-13749183"/>
+                  <borderPainted value="true"/>
+                  <contentAreaFilled value="true"/>
+                  <enabled value="true"/>
+                  <foreground color="-591362"/>
+                  <hideActionText value="false"/>
+                  <text value="Verificacion de correos"/>
+                </properties>
+              </component>
+              <component id="a2a54" class="javax.swing.JButton" binding="btnWindow3">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-13749183"/>
+                  <borderPainted value="true"/>
+                  <contentAreaFilled value="true"/>
+                  <doubleBuffered value="false"/>
+                  <enabled value="true"/>
+                  <focusTraversalPolicyProvider value="false"/>
+                  <focusable value="true"/>
+                  <foreground color="-591362"/>
+                  <hideActionText value="false"/>
+                  <inheritsPopupMenu value="false"/>
+                  <text value="Catalogo Champions"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+  <inspectionSuppressions>
+    <suppress inspection="I18nForm"/>
+  </inspectionSuppressions>
+</form>
