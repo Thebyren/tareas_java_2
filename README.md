@@ -7,6 +7,7 @@ requerimientos para clonar el proyecto correctamente.
 > ```shell
 > git clone -b pre-parcial https://github.com/Thebyren/tareas_java_2
 >```
+
 > [!IMPORTANT]
 > ejecutar esto para replicar las tabla creadas.
 > ```sql
