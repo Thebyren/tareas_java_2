@@ -46,6 +46,10 @@ requerimientos para clonar el proyecto correctamente.
 >    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 > );
 > ```
+
+>[!NOTE]
+> para replicar los datos exactos usados aqui ejecute las consultas dadas en [example.sql](./example.sql)
+
 ### GUI principal
 
 ![](./assets/MainGUI.PNG)
@@ -53,9 +57,11 @@ requerimientos para clonar el proyecto correctamente.
 ---
 
 ### GUI de basicCrud (los usuarios genericos)
-
+![](./assets/BasicCRUD.PNG)
 ---
 ### GUI de ListChampions (las de la champions)
-
+![](./assets/ChampionsList.PNG)
 ---
 ### GUI de verifyMails (usuarios de telebot)
+![](./assets/TelegramBotData.PNG)
+---
