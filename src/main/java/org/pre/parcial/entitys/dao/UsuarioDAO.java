@@ -10,4 +10,6 @@ public interface UsuarioDAO {
   List<Usuario> obtenerTodos();
   void actualizar(Usuario usuario);
   void eliminar(int idUsuario);
+  Usuario obtenerUsuarioPorCorreo(String correo);
+  List<Usuario> buscarUsuarios(String criterio);
 }

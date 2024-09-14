@@ -6,7 +6,7 @@ import org.pre.parcial.entitys.service.UsuarioService;
 import java.util.List;
 
 public class UsuarioController {
-  private UsuarioService usuarioService;
+  public UsuarioService usuarioService;
 
   public UsuarioController(UsuarioService usuarioService) {
     this.usuarioService = usuarioService;
@@ -49,4 +49,12 @@ public class UsuarioController {
   public void eliminarUsuario(int idUsuario) {
     usuarioService.eliminarUsuario(idUsuario);
   }
+  public boolean correoDuplicado(String correo) {
+    return usuarioService.obtenerUsuarioPorCorreo(correo) != null;
+  }
+  // Método en UsuarioController para buscar usuarios por criterio
+  public List<Usuario> buscarUsuarios(String criterio) {
+    return usuarioService.buscarUsuarios(criterio);
+  }
+
 }

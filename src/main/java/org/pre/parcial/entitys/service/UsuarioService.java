@@ -32,4 +32,12 @@ public class UsuarioService {
   public void eliminarUsuario(int idUsuario) {
     usuarioDAO.eliminar(idUsuario);
   }
+  public Usuario obtenerUsuarioPorCorreo(String correo) {
+    return usuarioDAO.obtenerUsuarioPorCorreo(correo); // Asume que ya existe en DAO
+  }
+  // Método en UsuarioService para buscar usuarios por criterio (nombre o correo)
+  public List<Usuario> buscarUsuarios(String criterio) {
+    return usuarioDAO.buscarUsuarios(criterio);
+  }
+
 }

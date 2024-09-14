@@ -58,8 +58,8 @@ public class Usuario {
     this.telegramId = telegramId;
   }
 
-  public String getActivo() {
-    return activo;
+  public boolean getActivo() {
+    return Boolean.parseBoolean(activo);
   }
 
   public void setActivo(String activo) {
